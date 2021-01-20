@@ -6,12 +6,13 @@ import itemRoutes from "./routes/items/items.routes"
 import entryRoutes from "./routes/entries/entries.routes";
 import saleRoutes from './routes/sales/sales.routes'
 import saleDetailRoutes from './routes/saledatails/saleDetails.routes'
+import depositRoutes from './routes/deposits/deposit.routes'
 const app =  express()
 
 app.use(morgan('dev'));
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
-app.use(videoRoutes, itemRoutes, entryRoutes, saleRoutes, saleDetailRoutes)
+app.use(videoRoutes, itemRoutes, entryRoutes, saleRoutes, saleDetailRoutes,depositRoutes)
 
 export default app;
