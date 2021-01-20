@@ -3,14 +3,14 @@ import * as saleController from './sales.controller'
 
 const router = Router();
 
-router.get('/saleDetails', saleController.getSales);
+router.get('/sales', saleController.getSales);
 
-router.get('/saleDetails/:id', saleController.getSale);
+router.get('/sales/:id', saleController.getSale);
 
-router.post('/saleDetails', saleController.createSale);
+router.post('/sales', saleController.createSale);
 
-router.delete('/saleDetails/:id', saleController.deleteSales);
+router.delete('/sales/:id', saleController.deleteSales);
 
-router.put('/saleDetails/:id', saleController.updateSales);
+router.put('/sales/:id', saleController.updateSales);
 
 export default router
