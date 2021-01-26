@@ -2,8 +2,7 @@ import { RequestHandler, Response } from "express";
 import SaleDetail from "./SaleDetail";
 
 export const createSaleDetail: RequestHandler = async (req, res) => {
-    console.log("aqui llega")
-    const saleDetailFound = await SaleDetail.findOne({ name: req.body.name });
+    const saleDetailFound = await SaleDetail.findOne({ invoice: req.body.invoice });
     if (saleDetailFound) {
         return res.status(303).json({ message: "sale already exist..." });
     } else {

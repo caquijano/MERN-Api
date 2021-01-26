@@ -2,7 +2,6 @@ import { RequestHandler, Response } from "express";
 import Item from "./Item";
 
 export const createItem: RequestHandler = async (req, res) => {
-    console.log("aqui llega")
     const itemFound = await Item.findOne({ name: req.body.name });
     if (itemFound) {
         return res.status(303).json({ message: "item already exist..." });

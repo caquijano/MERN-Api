@@ -13,7 +13,7 @@ const saleSchema = new Schema({
     },
     productName:{
         type: String,
-        required: true,
+        required: false,
         trim: true,
         
     },

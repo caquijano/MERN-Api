@@ -3,7 +3,7 @@ import Sale from "./Sale";
 
 export const createSale: RequestHandler = async (req, res) => {
     console.log("aqui llega")
-    const saleFound = await Sale.findOne({ name: req.body.name });
+    const saleFound = await Sale.findOne({ _id: req.body._id });
     if (saleFound) {
         return res.status(303).json({ message: "sale already exist..." });
     } else {
