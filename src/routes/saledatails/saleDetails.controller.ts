@@ -12,8 +12,8 @@ export const createSaleDetail: RequestHandler = async (req, res) => {
     }
 };
 export const getSaleDetail: RequestHandler = async (req, res) => {
-    const saleDetailFound = await SaleDetail.findById(req.params.id);
-    console.log(saleDetailFound)
+    console.log(req.params)
+    const saleDetailFound = await SaleDetail.findOne({invoice: req.params.id});
     if (!saleDetailFound) {
         return res.status(204).json({ message: " resource not found..." });
     } else {

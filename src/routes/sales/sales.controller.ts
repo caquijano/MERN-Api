@@ -2,7 +2,6 @@ import { RequestHandler, Response } from "express";
 import Sale from "./Sale";
 
 export const createSale: RequestHandler = async (req, res) => {
-    console.log("aqui llega")
     const saleFound = await Sale.findOne({ _id: req.body._id });
     if (saleFound) {
         return res.status(303).json({ message: "sale already exist..." });
@@ -13,8 +12,8 @@ export const createSale: RequestHandler = async (req, res) => {
     }
 };
 export const getSale: RequestHandler = async (req, res) => {
+    console.log(req.params.id)
     const saleFound = await Sale.findById(req.params.id);
-    console.log(saleFound)
     if (!saleFound) {
         return res.status(204).json({ message: " resource not found..." });
     } else {
