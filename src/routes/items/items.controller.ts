@@ -37,17 +37,14 @@ export const deleteItems: RequestHandler = async (req, res) => {
     }
 };
 export const updateItems: RequestHandler = async (req, res) => {
-    console.log("aqui llega 1")
     const itemUpdate = await Item.findByIdAndUpdate(req.params.id, req.body, {
         new: true,
     });
-    console.log("aqui llega2")
     if (!itemUpdate) {
         console.log("error")
         return res.status(204).json({ message: " resource not found..." });
         
     } else {
-        console.log("aqui llega final")
         return res.json({ message: "item Updated..." });
     }
 };
