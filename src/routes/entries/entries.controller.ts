@@ -1,4 +1,4 @@
-import { RequestHandler, Response } from "express";
+import { RequestHandler } from "express";
 import Entry from "./Entry";
 
 export const createEntry: RequestHandler = async (req, res) => {

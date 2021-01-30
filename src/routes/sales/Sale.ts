@@ -23,6 +23,12 @@ const saleSchema = new Schema({
         trim: true,
         
     },
+    date:{
+        type: Date,
+        required: true,
+        trim: true,
+        
+    },
     priceBuy:{
         type: Number,
         required: true,
