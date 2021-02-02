@@ -6,6 +6,11 @@ const entryDetailSchema = new Schema({
         required: true,
         trim:true
     },
+    detailId:{
+        type: String,
+        required: true,
+        trim:true
+    },
     provider:{
         type: String,
         required: true,

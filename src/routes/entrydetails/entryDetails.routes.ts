@@ -3,14 +3,14 @@ import * as entryDetailController from './entryDetails.controller'
 
 const router = Router();
 
-router.get('/entries', entryDetailController.getEntryDetails);
+router.get('/entryDetails', entryDetailController.getEntryDetails);
 
-router.get('/entries/:id', entryDetailController.getEntryDetail);
+router.get('/entryDetails/:id', entryDetailController.getEntryDetail);
 
-router.post('/entries', entryDetailController.createEntryDetail);
+router.post('/entryDetails', entryDetailController.createEntryDetail);
 
-router.delete('/entries/:id', entryDetailController.deleteEntryDetails);
+router.delete('/entryDetails/:id', entryDetailController.deleteEntryDetails);
 
-router.put('/entries/:id', entryDetailController.updateEntryDetails);
+router.put('/entryDetails/:id', entryDetailController.updateEntryDetails);
 
 export default router

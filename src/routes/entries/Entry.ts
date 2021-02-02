@@ -22,12 +22,6 @@ const entrySchema = new Schema({
         trim: true,
         
     },
-    date:{
-        type: Date,
-        required: true,
-        trim: true,
-        
-    },
     newPrice:{
         type: Number,
         required: true,

@@ -13,7 +13,7 @@ export const createEntryDetail: RequestHandler = async (req, res) => {
     }
 };
 export const getEntryDetail: RequestHandler = async (req, res) => {
-    const entryFound = await EntryDetail.findById(req.params.id);
+    const entryFound = await EntryDetail.findOne({detailId: req.params.id});
     if (!entryFound) {
         return res.status(204).json({ message: " resource not found..." });
     } else {
