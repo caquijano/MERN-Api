@@ -5,7 +5,7 @@ export const createEntry: RequestHandler = async (req, res) => {
     const entryFound = await Entry.findOne({ _id: req.body.name });
     
     if (entryFound) {
-        return res.status(303).json({ message: "entry already exist..." });
+        return res.status(303).json({ message: "entry already exist...." });
     } else {
         const entry = new Entry(req.body);
         const savedEntry = await entry.save();
